@@ -1,11 +1,11 @@
 // ignore_for_file: constant_identifier_names, prefer_interpolation_to_compose_strings
 
-import 'dart:convert';
+// import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-const kPrimaryColorString = '465263';
-const kPrimaryColor = Color(0xFF0066A8);
+const kPrimaryColorString = '7fa53f';
+const kPrimaryColor = Color(0xFF7Fa53F);
 const kSecondaryColor = Color.fromARGB(255, 0, 153, 255);
 const kTextColor = Color(0xFF12153D);
 const kTextLightColor = Color(0xFF9A9BB2);
