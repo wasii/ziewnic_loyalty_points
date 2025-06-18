@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
         useMaterial3: false,
-        fontFamily: "SF Pro Display",
+        // fontFamily: kSFProDisplay,
       ),
       home: const LoginPage(),
     );

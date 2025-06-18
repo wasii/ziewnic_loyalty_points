@@ -37,6 +37,7 @@ dependencies:
   http:
   shared_preferences:
   internet_connection_checker:
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +63,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/login/
+    - assets/images/icons/
+    - assets/images/logos/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -75,23 +77,26 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: SF Pro Display
-      fonts:
-        - asset: assets/fonts/sfprodisplay_blackitalic.otf
-        - asset: assets/fonts/sfprodisplay_bold.otf
-        - asset: assets/fonts/sfprodisplay_heavyitalic.otf
-        - asset: assets/fonts/sfprodisplay_lightitalic.otf
-        - asset: assets/fonts/sfprodisplay_medium.otf
-        - asset: assets/fonts/sfprodisplay_regular.otf
-        - asset: assets/fonts/sfprodisplay_semibolditalic.otf
-        - asset: assets/fonts/sfprodisplay_thinitalic.otf
-        - asset: assets/fonts/sfprodisplay_ultralightitalic.otf
-  #   - family: Trajan Pro
+  # fonts:
+  #   - family: SF Pro Display
   #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
+  #       - asset: assets/fonts/sfprodisplay_blackitalic.otf
+  #         weight: 900
+  #       - asset: assets/fonts/sfprodisplay_heavyitalic.otf
+  #         weight: 800
+  #       - asset: assets/fonts/sfprodisplay_bold.otf
   #         weight: 700
-  #
+  #       - asset: assets/fonts/sfprodisplay_medium.otf
+  #         weight: 600
+  #       - asset: assets/fonts/sfprodisplay_semibolditalic.otf
+  #         weight: 500
+  #       - asset: assets/fonts/sfprodisplay_regular.otf
+  #         weight: 400
+  #       - asset: assets/fonts/sfprodisplay_thinitalic.otf
+  #         weight: 300
+  #       - asset: assets/fonts/sfprodisplay_lightitalic.otf
+  #         weight: 200
+  #       - asset: assets/fonts/sfprodisplay_ultralightitalic.otf
+  #         weight: 100
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

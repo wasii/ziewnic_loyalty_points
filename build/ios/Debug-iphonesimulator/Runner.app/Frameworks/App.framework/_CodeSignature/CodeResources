@@ -10,67 +10,47 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		Le1cTrZUe2cL+5dxHcU6euCvubU=
+		D+DYDVT2/kNwN3NzanOOG3ofRFA=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		Vj1tknqdmnjl2ao+0ECl/N/lpkE=
+		iYnJpUT9CR3q69xuzKVwYD5Xt0Y=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		BzI/b55XsuxxdLU6KHWtjh/8aYI=
+		vKJkVIcw+LGHFnKJGwrQwCREv68=
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		xERNUbpN0idziOBKx2I+BfotSak=
+		gyr7lDoqbxmcIe9uevdPOwNN4ro=
 		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_blackitalic.otf</key>
+		<key>flutter_assets/assets/images/icons/checkmark_icon.png</key>
 		<data>
-		DegyA3ma+nCuNO+eKiIxRBR+itg=
+		Q5InraMsBu9Aj0Y6tEC+eMLIBGE=
 		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_bold.otf</key>
+		<key>flutter_assets/assets/images/icons/forward_arrow.png</key>
 		<data>
-		EA57f9JPrLyk2zjm1NfgHHO4KBg=
+		d7HJuctmBCe90LnjpAA/XWlz0Lc=
 		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_heavyitalic.otf</key>
+		<key>flutter_assets/assets/images/icons/lock_icon.png</key>
 		<data>
-		CUxPX28U1ZZO/o7ONzrJGGdL1Jg=
+		0EPgIrorXUvEn741eZYtVOCGtoI=
 		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_lightitalic.otf</key>
+		<key>flutter_assets/assets/images/icons/user_icon.png</key>
 		<data>
-		G/IStgBrAhzrE/a9zzfSvgWWBng=
+		3T0xK050xUWf0/ljDoozF496//s=
 		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_medium.otf</key>
+		<key>flutter_assets/assets/images/logos/app_background.png</key>
 		<data>
-		pfXgjdOMrC+Ff7dRD36Sojmbb1w=
+		JxlYbhtBY/cOFX07I79nLfF30N8=
 		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_regular.otf</key>
+		<key>flutter_assets/assets/images/logos/ziewnic_horizontal_logo.png</key>
 		<data>
-		4Z3xmeeNKW5bZJHUgyp2dWUy7UM=
+		bf/8uIh9xlJOiyc64NzmPPGw4mc=
 		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_semibolditalic.otf</key>
+		<key>flutter_assets/assets/images/logos/ziewnic_vertical_logo.png</key>
 		<data>
-		AU8Tzfi5SGF2BYImSP4/nMbGSOQ=
-		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_thinitalic.otf</key>
-		<data>
-		pUdn+cSyIMr50Moka7KeSErZjc4=
-		</data>
-		<key>flutter_assets/assets/fonts/sfprodisplay_ultralightitalic.otf</key>
-		<data>
-		4+P3r4cqag+i0A1Qmae/C9SkZHM=
-		</data>
-		<key>flutter_assets/assets/images/login/UAN.png</key>
-		<data>
-		Sx9ehUEB8rhZFrDKrnvHd3vecDA=
-		</data>
-		<key>flutter_assets/assets/images/login/login-header-bg.png</key>
-		<data>
-		TXLYg3y7NbDo6DleJ/ALynzOL6U=
-		</data>
-		<key>flutter_assets/assets/images/login/ziwenic_logo.png</key>
-		<data>
-		M5QBiaLkjx0p4UsUWKaMMoi2EY4=
+		IuCOQ3rAwaWsIz8CGCoPDCWRkN4=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -82,7 +62,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		CvXeRmjcqa7ImN1WMMvmVMLUJqs=
+		UXFFEX8gX1lrgROOmJO0cz3HVFY=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -103,112 +83,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+7QbwhdzFeY81NE18lemWmY9DwTTtx9wtLslsiNaf+E=
+			MpxjlDkRF7n6RQS6L0eipn5d5Yp/hilu8ZzZWhA6Ng8=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FGHsNnt4ixN8laeCNbV2bHqlxHcQrXIcHMz+EOgOazU=
+			M6+iz+8DRR5cQGe3+zSbuOhHcRVBfqA7lhn/EEJj/N4=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LcOzsaqRLT+nzA1pUXlFIXZ/YuG7gJjkUtMjdNxFKOY=
+			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES.Z</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vhs8hOQC6fnWWZewtur5MmvwyNYEHLGmCPmDJf0T5u8=
+			Kr/w/xuFh9ziAF5FgEUREzUxMxxs3bzspXtFn43nR/4=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_blackitalic.otf</key>
+		<key>flutter_assets/assets/images/icons/checkmark_icon.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uez9lEXkm4ZJWmK/Xfz39ubKzWTEY4o599GJ+/cHsoQ=
+			9PM8WSWJrc2R5JgMjWm6GIVr8uK8wlbgGPnfVqxzDp0=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_bold.otf</key>
+		<key>flutter_assets/assets/images/icons/forward_arrow.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qYEAH21OcCkv0m+o4FQ3xKnw+MWYECf/DO6tAbswMR8=
+			yB94G5GzE3XkiDFZJ+Ckkb+QQaLMOl6VKTD2RkyUqT4=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_heavyitalic.otf</key>
+		<key>flutter_assets/assets/images/icons/lock_icon.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9xQ7zVNSKDiWuwQftHj+R9z7HwvXzM1bvfkyo8GGlZY=
+			ckK+nSkQvOUaJ2EpJeKjjGUybp2CgH7dTPaXRwzJQhI=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_lightitalic.otf</key>
+		<key>flutter_assets/assets/images/icons/user_icon.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LxQltGSLdyrwfLmW7JrICuweYdtaOI8tDynqIaqkl1U=
+			me+G2OxMsEdb2QOAkhzQw90SQDSlTfK45nO4fLzz7eI=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_medium.otf</key>
+		<key>flutter_assets/assets/images/logos/app_background.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y/0XkZhW787avdc3gdrSmEMmkornyWNb72InsafXHSE=
+			oXVDbwUP5mDAcx2NO1i6Xw6tJDhfNomwsDjDzp8x0sU=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_regular.otf</key>
+		<key>flutter_assets/assets/images/logos/ziewnic_horizontal_logo.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			caIWLIUuh7qmRAyYPkBigzkWRneMi8dOV7AGE6NBL4A=
+			1qFHw6ou2t3Qxh5QheGKwXrpT4HAdwy94cOrbXpQKIQ=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_semibolditalic.otf</key>
+		<key>flutter_assets/assets/images/logos/ziewnic_vertical_logo.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QYGqwPCkdY4cj+8Mru3rwXCTGWRAQxMVVtaO9gYhxLc=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_thinitalic.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dRNKKtLG4BayJQeNAP2cLq7Xv1r5UHQspnNaAfcBUwI=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/fonts/sfprodisplay_ultralightitalic.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OeNVqerRBgjx1g6bUjbeHNJKbumII5g0EkTZe71bmeU=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/images/login/UAN.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nHMC6s8RK1lzCg/OyH+XSNXJEcXQcMag70j4ojdYhbk=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/images/login/login-header-bg.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Oq/SmyDPQ7Za1dIwBeH8PlMHXx1vzh9fflzlmR+st4s=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/images/login/ziwenic_logo.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xKsSpqSufHcBGsw+MxCntQbLGa6/GJgLy5wtID3N39k=
+			44dgnFdiexYD1EiitSvh8g+pt+9mHzo28Ey/3437BLY=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -229,7 +174,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G4OOot8j0z8X6znfBowT2B72NSLd65lEWH4aLD6Kjlo=
+			IyQ1Igh+TIRgqeYS/UZ5IUKKYVqRxf378StL0VwMTxo=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
