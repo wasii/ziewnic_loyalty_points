@@ -4,6 +4,7 @@ import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_otp_fields.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/update_password/update_new_password.dart';
 
 class EnterOTPPage extends StatefulWidget {
   final String email;
@@ -121,7 +122,14 @@ class _EnterOTPPageState extends State<EnterOTPPage> {
                     text: 'Verify Code',
                     isDisabled: isButtonEnabled,
                     showImage: true,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const UpdateNewPassword(),
+                        ),
+                      );
+                    },
                   ),
                   SizedBox(
                     height: 30,

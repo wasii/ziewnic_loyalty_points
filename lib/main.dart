@@ -3,6 +3,8 @@ import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/pages/authentication/forget_password/forget_password_page.dart';
 import 'package:ziewnic_loyalty_points/pages/authentication/login/login_page.dart';
 import 'package:ziewnic_loyalty_points/pages/authentication/registration/registration_page.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/update_password/update_new_password.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/update_password_confirm/update_password_confirm.dart';
 
 void main() {
   runApp(const MyApp());
