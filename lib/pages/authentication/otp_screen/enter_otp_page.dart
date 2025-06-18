@@ -32,6 +32,7 @@ class _EnterOTPPageState extends State<EnterOTPPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Container(
