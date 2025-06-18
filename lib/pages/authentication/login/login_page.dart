@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
-import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/registration/registration_page.dart';
+
+import '../../../components/custom_input_textfield_with_icon.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -97,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       height: 40,
                     ),
-                    CustomInputField(
+                    CustomInputFieldWithIcon(
                       controller: usernameController,
                       hintText: 'Username',
                       imageAssetPath: '${kIconFolder}user_icon.png',
@@ -105,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       height: 20,
                     ),
-                    CustomInputField(
+                    CustomInputFieldWithIcon(
                       controller: passwordController,
                       hintText: 'Password',
                       imageAssetPath: '${kIconFolder}lock_icon.png',
@@ -143,8 +145,7 @@ class _LoginPageState extends State<LoginPage> {
                           backgroundColor:
                               WidgetStateProperty.resolveWith<Color>((states) {
                             if (states.contains(WidgetState.disabled)) {
-                              return kPrimaryColor
-                                  .withAlpha(100); // custom disabled color
+                              return kDefaultDisabledButtonColor; // custom disabled color
                             }
                             return kPrimaryColor; // enabled color
                           }),
@@ -214,7 +215,14 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const RegistrationPage(),
+                              ),
+                            );
+                          },
                           child: Text(
                             "REGISTER NOW",
                             style: GoogleFonts.poppins(

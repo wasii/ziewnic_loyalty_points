@@ -14,6 +14,7 @@ const kTextFieldTextColor = Color(0xFFA09D98);
 const kTextFieldHeadingNameColor = Color(0xFF383737);
 const kTextFieldMandatoryColor = Color(0xFFFF0000);
 const kDefaultTextFieldColor = Color(0xFF464646);
+const kDefaultDisabledButtonColor = Color(0xFFC0E599);
 
 //Image Paths
 const kLogoFolder = 'assets/images/logos/';
