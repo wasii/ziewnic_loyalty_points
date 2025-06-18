@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
+import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -92,7 +93,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 children: [
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 5),
                   // Top logo + text
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -248,59 +249,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                             SizedBox(
                               height: 20,
                             ),
-                            SizedBox(
-                              width: double.infinity,
-                              height: 52,
-                              child: ElevatedButton(
-                                onPressed: isButtonEnabled ? () {} : null,
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      WidgetStateProperty.resolveWith<Color>(
-                                          (states) {
-                                    if (states.contains(WidgetState.disabled)) {
-                                      return kDefaultDisabledButtonColor; // custom disabled color
-                                    }
-                                    return kPrimaryColor; // enabled color
-                                  }),
-                                  shape: WidgetStateProperty.all<
-                                      RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                  ),
-                                  foregroundColor:
-                                      WidgetStateProperty.resolveWith<Color>(
-                                          (states) {
-                                    if (states.contains(WidgetState.disabled)) {
-                                      return Colors
-                                          .white; // text/icon color when disabled
-                                    }
-                                    return Colors.white;
-                                  }),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    const SizedBox(
-                                        width:
-                                            24), // left spacer to center "Login" text
-                                    Text(
-                                      "Register",
-                                      style: GoogleFonts.poppins(
-                                        textStyle: const TextStyle(
-                                          fontSize: 24,
-                                        ),
-                                      ),
-                                    ),
-                                    Image.asset(
-                                      '${kIconFolder}forward_arrow.png', // image on the right
-                                      height: 24,
-                                      width: 24,
-                                    ),
-                                  ],
-                                ),
-                              ),
+                            CustomPrimaryButton(
+                              text: 'Register',
+                              isDisabled: isButtonEnabled,
+                              onPressed: () {},
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,

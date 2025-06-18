@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/forget_password/forget_password_page.dart';
 import 'package:ziewnic_loyalty_points/pages/authentication/login/login_page.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/registration/registration_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
         useMaterial3: false,
-        // fontFamily: kSFProDisplay,
       ),
       home: const LoginPage(),
     );

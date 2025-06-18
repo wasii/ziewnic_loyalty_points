@@ -134,7 +134,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
 
   TextInputType _getKeyboardType(String label) {
     final lower = label.toLowerCase();
-    if (lower.contains('email')) {
+    if (lower.contains('email') || lower.contains('your email')) {
       return TextInputType.emailAddress;
     } else if (lower.contains('whatsapp number') ||
         lower.contains('phone') ||
