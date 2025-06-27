@@ -49,7 +49,7 @@ class _UpdateNewPasswordState extends State<UpdateNewPassword> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('${kLogoFolder}app_background.png'),
+                image: AssetImage('${kLogoFolder}app_background_2.png'),
                 fit: BoxFit.cover,
               ),
             ),

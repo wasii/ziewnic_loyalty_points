@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		jue/46O77gsE6pRKKx01pJ1vGew=
+		2DiUbiSfORvecmEJ2nH3klNJcu4=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		8PA0IpdG7YAbmvRkWR/i8+lZPxg=
+		0nqFg6eVUCK7DZr5PwHX1e/zdU0=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		gyr7lDoqbxmcIe9uevdPOwNN4ro=
+		p5OLQcj+Grr9GEcK/IUAAohoUzU=
 		</data>
 		<key>flutter_assets/assets/images/icons/back_button.png</key>
 		<data>
@@ -48,6 +48,10 @@
 		<data>
 		JxlYbhtBY/cOFX07I79nLfF30N8=
 		</data>
+		<key>flutter_assets/assets/images/logos/app_background_2.png</key>
+		<data>
+		EJyJfClfzC8GW4Xw+f7NXtKk0es=
+		</data>
 		<key>flutter_assets/assets/images/logos/ziewnic_horizontal_logo.png</key>
 		<data>
 		bf/8uIh9xlJOiyc64NzmPPGw4mc=
@@ -66,7 +70,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		1dABv+8Z8wcwLJ3F2pMJv9C/D7M=
+		LE5gziISuAuJMOSqScO2QlWvqhY=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -87,14 +91,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			x0/IqpDUSc/njti42754g9yX4fUFFI4QZnkjwwnosWU=
+			ILFpo57H4wVHRQNlFJCTgvU92NRdm1Qzk9NkHcqfGoY=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/8ZluMpyOmNy/NbJkxiUgsDw9d6kfkqKF0HesRLJqKY=
+			PNzdvTRoIF1dsfvrXvI3vdNKQpMNtfpRBm8KQED+Xhg=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -108,7 +112,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kr/w/xuFh9ziAF5FgEUREzUxMxxs3bzspXtFn43nR/4=
+			NMZEn8pDAfvAHWEuiHsNKAlBbGN4fnXMB3YKZ5rx+Lw=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/icons/back_button.png</key>
@@ -153,6 +157,13 @@
 			oXVDbwUP5mDAcx2NO1i6Xw6tJDhfNomwsDjDzp8x0sU=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/images/logos/app_background_2.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0lf4VS0R77v2TOfBkwj5Ft3T0J477LSBcj4RxSfahY4=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/images/logos/ziewnic_horizontal_logo.png</key>
 		<dict>
 			<key>hash2</key>
@@ -185,7 +196,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H96p4r1MFAq1Lmxo7dsOs9LwG2ZRrzb85rpvMdIsb/c=
+			I6D7AHloiUXvRT1SPhSviaQqJY/Tw0CxGPxw9cIclFk=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

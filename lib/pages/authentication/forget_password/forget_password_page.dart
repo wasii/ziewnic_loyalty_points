@@ -42,7 +42,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('${kLogoFolder}app_background.png'),
+                image: AssetImage('${kLogoFolder}app_background_2.png'),
                 fit: BoxFit.cover,
               ),
             ),

@@ -38,7 +38,7 @@ class _EnterOTPPageState extends State<EnterOTPPage> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('${kLogoFolder}app_background.png'),
+                image: AssetImage('${kLogoFolder}app_background_2.png'),
                 fit: BoxFit.cover,
               ),
             ),
