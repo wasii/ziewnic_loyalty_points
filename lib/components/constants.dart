@@ -19,6 +19,7 @@ const kDefaultDisabledButtonColor = Color(0xFFC0E599);
 //Image Paths
 const kLogoFolder = 'assets/images/logos/';
 const kIconFolder = 'assets/images/icons/';
+const kBGFolder = 'assets/images/bg/';
 
 const kSecondaryColor = Color.fromARGB(255, 0, 153, 255);
 const kTextColor = Color(0xFF12153D);
