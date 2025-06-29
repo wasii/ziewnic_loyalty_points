@@ -62,7 +62,7 @@ class _DashboardState extends State<Dashboard> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 20, vertical: 24),
                     decoration: BoxDecoration(
-                      color: Color(0xF5F2F2F2),
+                      color: Color(0xFFFFFFFF),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(40),
                         topRight: Radius.circular(40),
