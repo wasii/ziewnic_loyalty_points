@@ -4,6 +4,7 @@ import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
 import 'package:ziewnic_loyalty_points/pages/authentication/forget_password/forget_password_page.dart';
 import 'package:ziewnic_loyalty_points/pages/authentication/registration/registration_page.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/dashboard.dart';
 import '../../../components/custom_input_textfield_with_icon.dart';
 
 class LoginPage extends StatefulWidget {
@@ -145,7 +146,14 @@ class _LoginPageState extends State<LoginPage> {
                                 CustomPrimaryButton(
                                   text: 'Login',
                                   isDisabled: isButtonEnabled,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Dashboard(),
+                                      ),
+                                    );
+                                  },
                                 ),
                                 TextButton(
                                   onPressed: () {

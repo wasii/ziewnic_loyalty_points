@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
 
 class CustomSidebarDrawer extends StatelessWidget {
+  final String currentScreen; // 👈 add this
+  const CustomSidebarDrawer({super.key, required this.currentScreen});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -33,17 +37,29 @@ class CustomSidebarDrawer extends StatelessWidget {
             Text("muhammadsufiyan777@gamil.com",
                 style: TextStyle(color: Colors.grey)),
             const Divider(height: 40, thickness: 1),
-            _buildMenuItem(context, Icons.home, "Home",
-                iconColor: kPrimaryColor),
-            _buildMenuItem(context, Icons.build, "Installation",
-                iconColor: kPrimaryColor),
-            _buildMenuItem(context, Icons.monetization_on, "Claim Points",
-                iconColor: kPrimaryColor),
-            _buildMenuItem(context, Icons.card_giftcard, "Loyalty Rewards",
-                iconColor: kPrimaryColor),
             _buildMenuItem(
-                context, Icons.history, "Points Inventory\n/ History",
-                iconColor: kPrimaryColor),
+              context,
+              Icons.home,
+              "Home",
+              isActive: currentScreen == "Home",
+            ),
+            _buildMenuItem(context, Icons.build, "Installation",
+                isActive: currentScreen == "Installation"),
+            _buildMenuItem(
+              context,
+              Icons.monetization_on,
+              "Claim Points",
+            ),
+            _buildMenuItem(
+              context,
+              Icons.card_giftcard,
+              "Loyalty Rewards",
+            ),
+            _buildMenuItem(
+              context,
+              Icons.history,
+              "Points Inventory\n/ History",
+            ),
             Spacer(),
             Padding(
               padding:
@@ -75,25 +91,25 @@ class CustomSidebarDrawer extends StatelessWidget {
     IconData icon,
     String title, {
     bool isActive = false,
-    Color iconColor = Colors.black,
   }) {
+    final activeColor = kPrimaryColor;
+    final defaultColor = Colors.black;
+
     return InkWell(
       onTap: () {
-        print("$title tapped");
-        Navigator.pop(context); // Close drawer after tap
-        // Navigator.push(context, MaterialPageRoute(builder: (_) => SomePage()));
+        Navigator.of(context).pop();
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
         child: Row(
           children: [
-            Icon(icon, color: iconColor, size: 28),
+            Icon(icon, color: isActive ? activeColor : defaultColor, size: 28),
             const SizedBox(width: 16),
             Expanded(
               child: Text(
                 title,
                 style: TextStyle(
-                  color: iconColor,
+                  color: isActive ? activeColor : defaultColor,
                   fontSize: 16,
                   fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
                 ),

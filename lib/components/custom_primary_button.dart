@@ -36,25 +36,46 @@ class CustomPrimaryButton extends StatelessWidget {
             ),
           ),
           foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+          padding: WidgetStateProperty.all<EdgeInsets>(EdgeInsets.zero),
         ),
         child: Row(
-          mainAxisAlignment: showImage
-              ? MainAxisAlignment.spaceBetween
-              : MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const SizedBox(width: 24),
-            Text(
-              text,
-              style: GoogleFonts.poppins(
-                textStyle: const TextStyle(fontSize: 24),
+            // 👈 Dummy left image (invisible to balance layout)
+            showImage
+                ? Opacity(
+                    opacity: 0,
+                    child: Image.asset(
+                      '${kIconFolder}forward_arrow.png',
+                      height: 24,
+                      width: 24,
+                    ),
+                  )
+                : SizedBox(width: 24),
+
+            // 🔥 Centered Text
+            Expanded(
+              child: Center(
+                child: Text(
+                  text,
+                  style: GoogleFonts.poppins(
+                    textStyle: const TextStyle(fontSize: 24),
+                  ),
+                ),
               ),
             ),
-            if (showImage)
-              Image.asset(
-                '${kIconFolder}forward_arrow.png',
-                height: 24,
-                width: 24,
-              ),
+
+            // 👉 Real image on right
+            showImage
+                ? Padding(
+                    padding: const EdgeInsets.only(right: 16),
+                    child: Image.asset(
+                      '${kIconFolder}forward_arrow.png',
+                      height: 24,
+                      width: 24,
+                    ),
+                  )
+                : SizedBox(width: 24),
           ],
         ),
       ),

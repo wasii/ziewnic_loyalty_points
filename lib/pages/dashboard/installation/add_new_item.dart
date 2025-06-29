@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/installation/item_added_successfully.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
 
 class AddNewItem extends StatefulWidget {
@@ -12,44 +14,71 @@ class AddNewItem extends StatefulWidget {
 }
 
 class _AddNewItemState extends State<AddNewItem> {
-  final TextEditingController addSerialNumberController =
-      TextEditingController();
+  final TextEditingController addNameController = TextEditingController();
+  final TextEditingController addMobileController = TextEditingController();
+  final TextEditingController addItemController = TextEditingController();
+  final TextEditingController addCityController = TextEditingController();
+  final TextEditingController addAddressController = TextEditingController();
+  final TextEditingController addFilesController = TextEditingController();
+  final TextEditingController addRemarksController = TextEditingController();
 
   bool isButtonEnabled = false;
 
   @override
   void initState() {
     super.initState();
-    addSerialNumberController.addListener(_updateButtonState);
+    addNameController.addListener(_updateButtonState);
+    addMobileController.addListener(_updateButtonState);
+    addItemController.addListener(_updateButtonState);
+    addCityController.addListener(_updateButtonState);
+    addAddressController.addListener(_updateButtonState);
+    addFilesController.addListener(_updateButtonState);
+    addRemarksController.addListener(_updateButtonState);
   }
 
   void _updateButtonState() {
     setState(() {
-      isButtonEnabled = addSerialNumberController.text.length == 8;
+      isButtonEnabled = addNameController.text.isNotEmpty &&
+          addMobileController.text.isNotEmpty &&
+          addItemController.text.isNotEmpty &&
+          addCityController.text.isNotEmpty &&
+          addAddressController.text.isNotEmpty &&
+          addFilesController.text.isNotEmpty;
     });
   }
 
   @override
   void dispose() {
-    addSerialNumberController.dispose();
+    addNameController.dispose();
+    addMobileController.dispose();
+    addItemController.dispose();
+    addCityController.dispose();
+    addAddressController.dispose();
+    addFilesController.dispose();
+    addRemarksController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomSidebarDrawer(),
       appBar: AppBar(
         title: Text(""),
-        backgroundColor: Colors.black87,
-        elevation: 0,
+        backgroundColor: kPrimaryColor,
+        elevation: 1,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context); // 👈 goes back
+          },
+        ),
       ),
       body: Stack(
         children: [
           Container(
             height: 260,
             decoration: BoxDecoration(
-              color: Colors.black87,
+              color: kPrimaryColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(50),
                 bottomRight: Radius.circular(50),
@@ -100,26 +129,65 @@ class _AddNewItemState extends State<AddNewItem> {
                         ),
                       ),
                       SizedBox(height: 20),
-                      Column(
-                        children: [
-                          CustomInputField(
-                              controller: addSerialNumberController,
-                              headingText: "Serial Number",
-                              hintText: 'Enter your 8-digits serial number',
-                              isRequired: true,
-                              textHeight: 57),
-                          Text(
-                            "Please scratch your loyalty card and enter the 8-digit serial number.",
-                            style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
-                            ),
+                      Expanded(
+                        child: SingleChildScrollView(
+                          physics: BouncingScrollPhysics(),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CustomInputField(
+                                controller: addNameController,
+                                headingText: "Name",
+                                hintText: 'Enter your name',
+                                isRequired: true,
+                                textHeight: 57,
+                              ),
+                              CustomInputField(
+                                controller: addMobileController,
+                                headingText: "Mobile",
+                                hintText: 'Enter your mobile number',
+                                isRequired: true,
+                                textHeight: 57,
+                              ),
+                              CustomInputField(
+                                controller: addItemController,
+                                headingText: "Items",
+                                hintText: 'Please select items',
+                                isRequired: true,
+                                textHeight: 57,
+                              ),
+                              CustomInputField(
+                                controller: addCityController,
+                                headingText: "City",
+                                hintText: 'Enter your city name',
+                                isRequired: true,
+                                textHeight: 57,
+                              ),
+                              CustomInputField(
+                                controller: addAddressController,
+                                headingText: "Address",
+                                hintText: 'Enter your address',
+                                isRequired: true,
+                                textHeight: 90,
+                              ),
+                              CustomInputField(
+                                controller: addFilesController,
+                                headingText: "Upload pics of installation site",
+                                hintText: '',
+                                isRequired: true,
+                                textHeight: 57,
+                              ),
+                              CustomInputField(
+                                controller: addRemarksController,
+                                headingText: "Remarks",
+                                hintText: 'Enter your name',
+                                isRequired: false,
+                                textHeight: 90,
+                              )
+                            ],
                           ),
-                          SizedBox(
-                            height: 20,
-                          )
-                        ],
-                      )
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -132,10 +200,15 @@ class _AddNewItemState extends State<AddNewItem> {
         color: Colors.white,
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 50),
         child: CustomPrimaryButton(
-          text: 'Search',
+          text: 'Next',
           isDisabled: isButtonEnabled,
           onPressed: () {
-            // your search logic
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ItemAddedSuccessfully(),
+              ),
+            );
           },
           showImage: false,
         ),

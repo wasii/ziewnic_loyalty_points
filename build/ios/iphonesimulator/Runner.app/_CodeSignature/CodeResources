@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		mD5QxeE8MqSYsWp1MONgQ5Atd84=
+		UIIgTZ26bi1QQ2JgNZ850oL3W4A=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,15 +54,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		vTwji7LfgH0HWr3w/Uga45xcXzs=
+		QdXEHxpHvDL+dlcli4J9nlMFit0=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		g9RnQolKi3cAhzvVURwyreLCGws=
+		Ks9Mc6yc5rznyBR1nU3GT/Ax7f4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		cBmNIxMONUYivpVkXUsuxkg5yMM=
+		W9B0QSG9nm1/9awuPs5x3NB5etk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -71,6 +71,10 @@
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
 		p5OLQcj+Grr9GEcK/IUAAohoUzU=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/bg/Congratulations.png</key>
+		<data>
+		UNwRZ34urEhRVrCFCTio57S3jCM=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/bg/reward1.png</key>
 		<data>
@@ -122,7 +126,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		TSfCn4i91HtkbW9G4v6poq6ejU0=
+		7qrnKSSI4umZdmCEPHw/iVORRjQ=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -381,7 +385,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8TF6J70W9cWWCLX7A6tKJUZV/EPNRbkCY0IGhyAskZM=
+			WcoffjbXf45Y6vSMEjhoGzcz6y2K0ZW0zM5HxVpoadk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -395,21 +399,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6eNKp21ft/+81zXUK8OGsm82+8H9fG7po1O1NSwiwk4=
+			TiUTFRUo3u4bIkS3i4kMy9IJkcNq+W5z1cTBonz44w0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j3/lAUJO2POY8I/MjRaFWfMq7g8g5U/7cZF2s6wsiYQ=
+			qZnYNirVMVmYDuZ4kQXUVWFu4v2LWR56vSkyKt6SfcE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lOKxRWYOFClktS5yxnMekrtKryqg0MAdlD6byjfFKb8=
+			Df5ksCFU1xrQGxgw9LTUVb3ul12CmbwIbx4VWbS4f1g=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -424,6 +428,13 @@
 			<key>hash2</key>
 			<data>
 			NMZEn8pDAfvAHWEuiHsNKAlBbGN4fnXMB3YKZ5rx+Lw=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/bg/Congratulations.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KJo+0Z/UIACAUu3TcGe/KTwihEjgT9p1Nd2PScx5YN8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/bg/reward1.png</key>
@@ -514,7 +525,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v2ZYCpV0mRsfkkNtx5RA8VmdfcX7oqixIOIe876R9/g=
+			kWFJuTkCklAv6oZFSfcZ26aQ2LhYFWWJ4kE6gWWk7EA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

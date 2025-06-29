@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/registration_successful/registration_successful.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -253,7 +254,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
                             CustomPrimaryButton(
                               text: 'Register',
                               isDisabled: isButtonEnabled,
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const RegistrationSuccessful(),
+                                  ),
+                                );
+                              },
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,

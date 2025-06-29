@@ -13,10 +13,12 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomSidebarDrawer(),
+      drawer: CustomSidebarDrawer(
+        currentScreen: "Home",
+      ),
       appBar: AppBar(
         title: Text(""),
-        backgroundColor: Colors.black87,
+        backgroundColor: kPrimaryColor,
         elevation: 0,
       ),
       body: SafeArea(
@@ -25,7 +27,7 @@ class _DashboardState extends State<Dashboard> {
             Container(
               height: 260,
               decoration: BoxDecoration(
-                color: Colors.black87,
+                color: kPrimaryColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
