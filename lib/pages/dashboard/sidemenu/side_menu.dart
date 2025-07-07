@@ -4,7 +4,13 @@ import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.
 
 class CustomSidebarDrawer extends StatelessWidget {
   final String currentScreen; // 👈 add this
-  const CustomSidebarDrawer({super.key, required this.currentScreen});
+  final void Function(String title) onMenuItemTap;
+
+  const CustomSidebarDrawer({
+    super.key,
+    required this.currentScreen,
+    required this.onMenuItemTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +103,10 @@ class CustomSidebarDrawer extends StatelessWidget {
 
     return InkWell(
       onTap: () {
-        Navigator.of(context).pop();
+        Navigator.of(context).pop(); // Close drawer
+        Future.delayed(Duration(milliseconds: 300), () {
+          onMenuItemTap(title); // Navigate after closing
+        });
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),

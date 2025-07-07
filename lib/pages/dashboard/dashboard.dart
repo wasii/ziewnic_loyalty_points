@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
 
 class Dashboard extends StatefulWidget {
@@ -12,9 +13,19 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
+    void handleMenuItemTap(String selectedTitle) {
+      if (selectedTitle == "Installation") {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => SearchNewItem()),
+        );
+      }
+    }
+
     return Scaffold(
       drawer: CustomSidebarDrawer(
         currentScreen: "Home",
+        onMenuItemTap: handleMenuItemTap,
       ),
       appBar: AppBar(
         title: Text(""),

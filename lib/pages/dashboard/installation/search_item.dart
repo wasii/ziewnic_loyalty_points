@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/dashboard.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/add_new_item.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
 
@@ -39,9 +40,19 @@ class _SearchNewItemState extends State<SearchNewItem> {
 
   @override
   Widget build(BuildContext context) {
+    void handleMenuItemTap(String selectedTitle) {
+      if (selectedTitle == "Home") {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => Dashboard()),
+        );
+      }
+    }
+
     return Scaffold(
       drawer: CustomSidebarDrawer(
         currentScreen: "Installation",
+        onMenuItemTap: handleMenuItemTap,
       ),
       appBar: AppBar(
         title: Text(""),

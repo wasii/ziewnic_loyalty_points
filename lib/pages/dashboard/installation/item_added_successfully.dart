@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/dashboard.dart';
 
 class ItemAddedSuccessfully extends StatelessWidget {
   const ItemAddedSuccessfully({super.key});
@@ -138,7 +139,10 @@ class ItemAddedSuccessfully extends StatelessWidget {
           text: 'Back to Home',
           isDisabled: true,
           onPressed: () {
-            Navigator.of(context).popUntil((route) => route.isFirst);
+            Navigator.of(context).pushAndRemoveUntil(
+              MaterialPageRoute(builder: (_) => Dashboard()),
+              (route) => false,
+            );
           },
           showImage: false,
         ),
