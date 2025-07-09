@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/claim_points/claim_points.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
 
@@ -20,6 +22,12 @@ class _DashboardState extends State<Dashboard> {
           MaterialPageRoute(builder: (_) => SearchNewItem()),
         );
       }
+      if (selectedTitle == "Claim Points") {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => ClaimPoints()),
+        );
+      }
     }
 
     return Scaffold(
@@ -28,7 +36,15 @@ class _DashboardState extends State<Dashboard> {
         onMenuItemTap: handleMenuItemTap,
       ),
       appBar: AppBar(
-        title: Text(""),
+        title: Text(
+          "Home",
+          style: GoogleFonts.poppins(
+            textStyle: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
         backgroundColor: kPrimaryColor,
         elevation: 0,
       ),

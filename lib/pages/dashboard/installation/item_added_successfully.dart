@@ -13,7 +13,8 @@ class ItemAddedSuccessfully extends StatelessWidget {
       appBar: AppBar(
         title: Text(""),
         backgroundColor: kPrimaryColor,
-        elevation: 1,
+        elevation: 0,
+        automaticallyImplyLeading: false,
       ),
       body: Stack(
         children: [

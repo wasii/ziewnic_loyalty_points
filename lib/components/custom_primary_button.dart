@@ -7,20 +7,23 @@ class CustomPrimaryButton extends StatelessWidget {
   final bool isDisabled;
   final VoidCallback? onPressed;
   final bool showImage;
+  final double fontSize;
+  final double buttonHeight;
 
-  const CustomPrimaryButton({
-    super.key,
-    required this.text,
-    required this.isDisabled,
-    this.showImage = true,
-    required this.onPressed,
-  });
+  const CustomPrimaryButton(
+      {super.key,
+      required this.text,
+      required this.isDisabled,
+      this.showImage = true,
+      required this.onPressed,
+      this.fontSize = 24,
+      this.buttonHeight = 52});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 52,
+      height: buttonHeight,
       child: ElevatedButton(
         onPressed: isDisabled ? onPressed : null,
         style: ButtonStyle(
@@ -59,7 +62,7 @@ class CustomPrimaryButton extends StatelessWidget {
                 child: Text(
                   text,
                   style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(fontSize: 24),
+                    textStyle: TextStyle(fontSize: fontSize),
                   ),
                 ),
               ),

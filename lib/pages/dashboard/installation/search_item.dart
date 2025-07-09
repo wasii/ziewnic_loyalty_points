@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/claim_points/claim_points.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/dashboard.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/add_new_item.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
@@ -43,9 +44,10 @@ class _SearchNewItemState extends State<SearchNewItem> {
     void handleMenuItemTap(String selectedTitle) {
       if (selectedTitle == "Home") {
         Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (_) => Dashboard()),
-        );
+            context, MaterialPageRoute(builder: (_) => Dashboard()));
+      } else if (selectedTitle == "Claim Points") {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (_) => ClaimPoints()));
       }
     }
 
@@ -55,9 +57,17 @@ class _SearchNewItemState extends State<SearchNewItem> {
         onMenuItemTap: handleMenuItemTap,
       ),
       appBar: AppBar(
-        title: Text(""),
+        title: Text(
+          "Installation",
+          style: GoogleFonts.poppins(
+            textStyle: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
         backgroundColor: kPrimaryColor,
-        elevation: 1,
+        elevation: 0,
       ),
       body: Stack(
         children: [

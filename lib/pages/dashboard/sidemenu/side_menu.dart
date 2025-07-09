@@ -32,16 +32,25 @@ class CustomSidebarDrawer extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const SizedBox(height: 60),
-            CircleAvatar(
-              radius: 40,
-              backgroundImage: NetworkImage("https://i.pravatar.cc/300"),
+            const SizedBox(height: 80),
+            Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: NetworkImage("https://i.pravatar.cc/300"),
+                  ),
+                  const SizedBox(height: 8),
+                  Text("Sufiyan",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  Text("muhammadsufiyan777@gamil.com",
+                      style: TextStyle(color: Colors.grey)),
+                ],
+              ),
             ),
-            const SizedBox(height: 8),
-            Text("Sufiyan",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            Text("muhammadsufiyan777@gamil.com",
-                style: TextStyle(color: Colors.grey)),
             const Divider(height: 40, thickness: 1),
             _buildMenuItem(
               context,
@@ -55,16 +64,19 @@ class CustomSidebarDrawer extends StatelessWidget {
               context,
               Icons.monetization_on,
               "Claim Points",
+              isActive: currentScreen == "Claim Points",
             ),
             _buildMenuItem(
               context,
               Icons.card_giftcard,
               "Loyalty Rewards",
+              isActive: currentScreen == "Loyalty Rewards",
             ),
             _buildMenuItem(
               context,
               Icons.history,
               "Points Inventory\n/ History",
+              isActive: currentScreen == "Points Inventory\n/ History",
             ),
             Spacer(),
             Padding(
