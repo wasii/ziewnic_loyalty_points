@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ziewnic_loyalty_points/components/common_scaffold_layout.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
@@ -65,7 +66,7 @@ class _AddNewItemState extends State<AddNewItem> {
       appBar: AppBar(
         title: Text(""),
         backgroundColor: kPrimaryColor,
-        elevation: 0,
+        elevation: 1,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
@@ -73,128 +74,82 @@ class _AddNewItemState extends State<AddNewItem> {
           },
         ),
       ),
-      body: Stack(
-        children: [
-          Container(
-            height: 260,
-            decoration: BoxDecoration(
-              color: kPrimaryColor,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(50),
-                bottomRight: Radius.circular(50),
+      body: CommonScaffoldLayout(
+        title: 'Installation',
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "INSTALLATION, ADD NEW",
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Top Bar
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
-              ),
-              Center(
-                child: Text(
-                  "LOYALTY PROGRAM",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Expanded(
-                child: Container(
-                  width: double.infinity,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
+            SizedBox(height: 20),
+            Expanded(
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CustomInputField(
+                      controller: addNameController,
+                      headingText: "Name",
+                      hintText: 'Enter your name',
+                      isRequired: true,
+                      textHeight: 57,
                     ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "INSTALLATION, ADD NEW",
-                        style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      Expanded(
-                        child: SingleChildScrollView(
-                          physics: BouncingScrollPhysics(),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              CustomInputField(
-                                controller: addNameController,
-                                headingText: "Name",
-                                hintText: 'Enter your name',
-                                isRequired: true,
-                                textHeight: 57,
-                              ),
-                              CustomInputField(
-                                controller: addMobileController,
-                                headingText: "Mobile",
-                                hintText: 'Enter your mobile number',
-                                isRequired: true,
-                                textHeight: 57,
-                              ),
-                              CustomInputField(
-                                controller: addItemController,
-                                headingText: "Items",
-                                hintText: 'Please select items',
-                                isRequired: true,
-                                textHeight: 57,
-                              ),
-                              CustomInputField(
-                                controller: addCityController,
-                                headingText: "City",
-                                hintText: 'Enter your city name',
-                                isRequired: true,
-                                textHeight: 57,
-                              ),
-                              CustomInputField(
-                                controller: addAddressController,
-                                headingText: "Address",
-                                hintText: 'Enter your address',
-                                isRequired: true,
-                                textHeight: 90,
-                              ),
-                              CustomInputField(
-                                controller: addFilesController,
-                                headingText: "Upload pics of installation site",
-                                hintText: '',
-                                isRequired: true,
-                                textHeight: 57,
-                              ),
-                              CustomInputField(
-                                controller: addRemarksController,
-                                headingText: "Remarks",
-                                hintText: 'Enter your name',
-                                isRequired: false,
-                                textHeight: 90,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    CustomInputField(
+                      controller: addMobileController,
+                      headingText: "Mobile",
+                      hintText: 'Enter your mobile number',
+                      isRequired: true,
+                      textHeight: 57,
+                    ),
+                    CustomInputField(
+                      controller: addItemController,
+                      headingText: "Items",
+                      hintText: 'Please select items',
+                      isRequired: true,
+                      textHeight: 57,
+                    ),
+                    CustomInputField(
+                      controller: addCityController,
+                      headingText: "City",
+                      hintText: 'Enter your city name',
+                      isRequired: true,
+                      textHeight: 57,
+                    ),
+                    CustomInputField(
+                      controller: addAddressController,
+                      headingText: "Address",
+                      hintText: 'Enter your address',
+                      isRequired: true,
+                      textHeight: 90,
+                    ),
+                    CustomInputField(
+                      controller: addFilesController,
+                      headingText: "Upload pics of installation site",
+                      hintText: '',
+                      isRequired: true,
+                      textHeight: 57,
+                    ),
+                    CustomInputField(
+                      controller: addRemarksController,
+                      headingText: "Remarks",
+                      hintText: 'Enter your name',
+                      isRequired: false,
+                      textHeight: 90,
+                    )
+                  ],
                 ),
               ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         color: Colors.white,

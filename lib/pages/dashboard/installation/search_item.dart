@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ziewnic_loyalty_points/components/common_scaffold_layout.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
@@ -57,101 +58,46 @@ class _SearchNewItemState extends State<SearchNewItem> {
         onMenuItemTap: handleMenuItemTap,
       ),
       appBar: AppBar(
-        title: Text(
-          "Installation",
-          style: GoogleFonts.poppins(
-            textStyle: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
         backgroundColor: kPrimaryColor,
-        elevation: 0,
+        elevation: 1,
       ),
-      body: Stack(
-        children: [
-          Container(
-            height: 260,
-            decoration: BoxDecoration(
-              color: kPrimaryColor,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(50),
-                bottomRight: Radius.circular(50),
+      body: CommonScaffoldLayout(
+        title: 'Installation',
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "INSTALLATION, ADD NEW",
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Top Bar
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
-              ),
-              Center(
-                child: Text(
-                  "LOYALTY PROGRAM",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+            SizedBox(height: 20),
+            Column(
+              children: [
+                CustomInputField(
+                    controller: addSerialNumberController,
+                    headingText: "Serial Number",
+                    hintText: 'Enter your 8-digits serial number',
+                    isRequired: true,
+                    textHeight: 57),
+                Text(
+                  "Please scratch your loyalty card and enter the 8-digit serial number.",
+                  style: GoogleFonts.poppins(
+                    textStyle:
+                        TextStyle(fontSize: 8, fontWeight: FontWeight.w400),
                   ),
                 ),
-              ),
-              const SizedBox(height: 20),
-              Expanded(
-                child: Container(
-                  width: double.infinity,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "INSTALLATION, ADD NEW",
-                        style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      Column(
-                        children: [
-                          CustomInputField(
-                              controller: addSerialNumberController,
-                              headingText: "Serial Number",
-                              hintText: 'Enter your 8-digits serial number',
-                              isRequired: true,
-                              textHeight: 57),
-                          Text(
-                            "Please scratch your loyalty card and enter the 8-digit serial number.",
-                            style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontSize: 8, fontWeight: FontWeight.w400),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
+                SizedBox(
+                  height: 20,
+                )
+              ],
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         color: Colors.white,

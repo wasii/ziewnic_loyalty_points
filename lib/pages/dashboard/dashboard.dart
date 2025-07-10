@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ziewnic_loyalty_points/components/common_scaffold_layout.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/claim_points/claim_points.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/loyalty_rewards/loyalty_rewards.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
 
 class Dashboard extends StatefulWidget {
@@ -28,6 +30,12 @@ class _DashboardState extends State<Dashboard> {
           MaterialPageRoute(builder: (_) => ClaimPoints()),
         );
       }
+      if (selectedTitle == "Loyalty Rewards") {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => LoyaltyRewards()),
+        );
+      }
     }
 
     return Scaffold(
@@ -36,99 +44,43 @@ class _DashboardState extends State<Dashboard> {
         onMenuItemTap: handleMenuItemTap,
       ),
       appBar: AppBar(
-        title: Text(
-          "Home",
-          style: GoogleFonts.poppins(
-            textStyle: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
         backgroundColor: kPrimaryColor,
-        elevation: 0,
+        elevation: 1,
       ),
       body: SafeArea(
-        child: Stack(
-          children: [
-            Container(
-              height: 260,
-              decoration: BoxDecoration(
-                color: kPrimaryColor,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
+        child: CommonScaffoldLayout(
+          title: "Home",
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "MY CURRENT AVAILABLE",
+                style: GoogleFonts.poppins(
+                  textStyle:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
               ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Top Bar
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16.0, vertical: 16),
+              Text(
+                "POINTS: 0",
+                style: GoogleFonts.poppins(
+                  textStyle:
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
-
-                // Title
-                Center(
-                  child: Text(
-                    "LOYALTY PROGRAM",
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
+              ),
+              SizedBox(height: 20),
+              Expanded(
+                child: ListView(
+                  children: [
+                    _buildRewardImage("$kBGFolder/reward1.png"),
+                    SizedBox(height: 30),
+                    _buildRewardImage("$kBGFolder/reward1.png"),
+                    SizedBox(height: 30),
+                    _buildRewardImage("$kBGFolder/reward1.png"),
+                  ],
                 ),
-
-                const SizedBox(height: 20),
-
-                // Main Content Card
-                Expanded(
-                  child: Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 24),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFFFFFFF),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40),
-                      ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "MY CURRENT AVAILABLE",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                        Text(
-                          "POINTS: 0",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
-                        ),
-                        SizedBox(height: 20),
-                        Expanded(
-                          child: ListView(
-                            children: [
-                              _buildRewardImage("$kBGFolder/reward1.png"),
-                              SizedBox(height: 30),
-                              _buildRewardImage("$kBGFolder/reward1.png"),
-                              SizedBox(height: 30),
-                              _buildRewardImage("$kBGFolder/reward1.png"),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );

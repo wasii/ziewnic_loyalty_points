@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ziewnic_loyalty_points/components/common_scaffold_layout.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
+import 'package:ziewnic_loyalty_points/components/table_cell.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/dashboard.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/loyalty_rewards/loyalty_rewards.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
 
 class ClaimPoints extends StatefulWidget {
@@ -21,6 +24,9 @@ class _ClaimPointsState extends State<ClaimPoints> {
     } else if (selectedTitle == "Installation") {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (_) => SearchNewItem()));
+    } else if (selectedTitle == "Loyalty Rewards") {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (_) => LoyaltyRewards()));
     }
   }
 
@@ -38,128 +44,70 @@ class _ClaimPointsState extends State<ClaimPoints> {
         onMenuItemTap: handleMenuItemTap,
       ),
       appBar: AppBar(
-        title: Text(
-          "Claim Points",
-          style: GoogleFonts.poppins(
-            textStyle: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
         backgroundColor: kPrimaryColor,
-        elevation: 0,
+        elevation: 1,
       ),
-      body: Stack(
-        children: [
-          Container(
-            height: 260,
-            decoration: BoxDecoration(
-              color: kPrimaryColor,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(50),
-                bottomRight: Radius.circular(50),
+      body: CommonScaffoldLayout(
+        title: 'Claim Points',
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Table(
+            //   border: TableBorder.all(color: Colors.black),
+            //   columnWidths: const {
+            //     0: FlexColumnWidth(1),
+            //     1: FlexColumnWidth(2),
+            //     2: FlexColumnWidth(1),
+            //   },
+            //   children: [
+            //     TableRow(
+            //       decoration: BoxDecoration(
+            //         color: Colors.grey.shade300,
+            //       ),
+            //       children: [
+            //         tableHeader('Product'),
+            //         tableHeader("Description"),
+            //         tableHeader("Quantity"),
+            //       ],
+            //     ),
+            //   ],
+            // ),
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Table(
+                  border: TableBorder.all(color: Colors.black),
+                  columnWidths: const {
+                    0: FlexColumnWidth(1),
+                    1: FlexColumnWidth(2),
+                    2: FlexColumnWidth(1),
+                  },
+                  children: [
+                    for (int i = 0; i < data.length; i++)
+                      TableRow(
+                        decoration: BoxDecoration(
+                          color: i % 2 == 0
+                              ? Colors.grey.shade100 // even rows
+                              : Colors.grey.shade300,
+                        ),
+                        children: data[i].map((e) => tableCell(e)).toList(),
+                      ),
+                    TableRow(
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade300,
+                      ),
+                      children: [
+                        tableCell(''),
+                        tableCell(''),
+                        tableCell('Total $total'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
-              ),
-
-              //Title
-              Center(
-                child: Text(
-                  "LOYALTY PROGRAM",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 20),
-              Expanded(
-                child: Container(
-                  width: double.infinity,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      // Table(
-                      //   border: TableBorder.all(color: Colors.black),
-                      //   columnWidths: const {
-                      //     0: FlexColumnWidth(1),
-                      //     1: FlexColumnWidth(2),
-                      //     2: FlexColumnWidth(1),
-                      //   },
-                      //   children: [
-                      //     TableRow(
-                      //       decoration: BoxDecoration(
-                      //         color: Colors.grey.shade300,
-                      //       ),
-                      //       children: [
-                      //         tableCell('Product'),
-                      //         tableCell("Description"),
-                      //         tableCell("Quantity"),
-                      //       ],
-                      //     ),
-                      //   ],
-                      // ),
-                      Expanded(
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.vertical,
-                          child: Table(
-                            border: TableBorder.all(color: Colors.black),
-                            columnWidths: const {
-                              0: FlexColumnWidth(1),
-                              1: FlexColumnWidth(2),
-                              2: FlexColumnWidth(1),
-                            },
-                            children: [
-                              for (int i = 0; i < data.length; i++)
-                                TableRow(
-                                  decoration: BoxDecoration(
-                                    color: i % 2 == 0
-                                        ? Colors.grey.shade100 // even rows
-                                        : Colors.grey.shade300,
-                                  ),
-                                  children:
-                                      data[i].map((e) => tableCell(e)).toList(),
-                                ),
-                              TableRow(
-                                decoration: BoxDecoration(
-                                  color: Colors.grey.shade300,
-                                ),
-                                children: [
-                                  tableCell(''),
-                                  tableCell(''),
-                                  tableCell('Total $total'),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          )
-        ],
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -203,20 +151,6 @@ class _ClaimPointsState extends State<ClaimPoints> {
           },
         ),
       ),
-    );
-  }
-
-  Widget tableCell(String text) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Text(text,
-          style: GoogleFonts.poppins(
-            textStyle: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          textAlign: TextAlign.center),
     );
   }
 
