@@ -4,10 +4,12 @@ import 'package:ziewnic_loyalty_points/components/common_scaffold_layout.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
 import 'package:ziewnic_loyalty_points/components/table_cell.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/login/login_page.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/dashboard.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/loyalty_rewards/loyalty_rewards.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/points_inventory/points_inventory.dart';
 
 class ClaimPoints extends StatefulWidget {
   const ClaimPoints({super.key});
@@ -27,6 +29,15 @@ class _ClaimPointsState extends State<ClaimPoints> {
     } else if (selectedTitle == "Loyalty Rewards") {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (_) => LoyaltyRewards()));
+    } else if (selectedTitle == "Points Inventory\n/ History") {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (_) => PointsInventoryHistory()));
+    } else if (selectedTitle == "Logout") {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (_) => LoginPage()), // 👈 your login page
+        (route) => false, // 👈 remove all previous routes
+      );
     }
   }
 

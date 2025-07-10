@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
-import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
 
 class CustomSidebarDrawer extends StatelessWidget {
   final String currentScreen; // 👈 add this
@@ -93,6 +92,9 @@ class CustomSidebarDrawer extends StatelessWidget {
                 onPressed: () {
                   print("Logout tapped");
                   Navigator.pop(context); // Close drawer
+                  Future.delayed(Duration(milliseconds: 300), () {
+                    onMenuItemTap("Logout"); // Navigate after closing
+                  });
                 },
                 icon: Icon(Icons.logout),
                 label: Text("Logout"),

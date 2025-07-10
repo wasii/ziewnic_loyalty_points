@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
-import 'package:ziewnic_loyalty_points/pages/dashboard/dashboard.dart';
-import 'package:ziewnic_loyalty_points/pages/dashboard/loyalty_rewards/loyalty_rewards.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/login/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
         useMaterial3: false,
       ),
-      home: const LoyaltyRewards(),
+      home: const LoginPage(),
     );
   }
 }

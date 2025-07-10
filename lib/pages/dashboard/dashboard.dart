@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ziewnic_loyalty_points/components/common_scaffold_layout.dart';
 import 'package:ziewnic_loyalty_points/components/constants.dart';
+import 'package:ziewnic_loyalty_points/pages/authentication/login/login_page.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/claim_points/claim_points.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/search_item.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/loyalty_rewards/loyalty_rewards.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
+import 'package:ziewnic_loyalty_points/pages/dashboard/points_inventory/points_inventory.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -23,17 +25,26 @@ class _DashboardState extends State<Dashboard> {
           context,
           MaterialPageRoute(builder: (_) => SearchNewItem()),
         );
-      }
-      if (selectedTitle == "Claim Points") {
+      } else if (selectedTitle == "Claim Points") {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (_) => ClaimPoints()),
         );
-      }
-      if (selectedTitle == "Loyalty Rewards") {
+      } else if (selectedTitle == "Loyalty Rewards") {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (_) => LoyaltyRewards()),
+        );
+      } else if (selectedTitle == "Points Inventory\n/ History") {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => PointsInventoryHistory()),
+        );
+      } else if (selectedTitle == "Logout") {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (_) => LoginPage()), // 👈 your login page
+          (route) => false, // 👈 remove all previous routes
         );
       }
     }

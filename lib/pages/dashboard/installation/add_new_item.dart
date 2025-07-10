@@ -5,7 +5,6 @@ import 'package:ziewnic_loyalty_points/components/constants.dart';
 import 'package:ziewnic_loyalty_points/components/custom_input_textfield.dart';
 import 'package:ziewnic_loyalty_points/components/custom_primary_button.dart';
 import 'package:ziewnic_loyalty_points/pages/dashboard/installation/item_added_successfully.dart';
-import 'package:ziewnic_loyalty_points/pages/dashboard/sidemenu/side_menu.dart';
 
 class AddNewItem extends StatefulWidget {
   const AddNewItem({super.key});
