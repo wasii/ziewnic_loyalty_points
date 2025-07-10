@@ -133,8 +133,7 @@ class _LoyaltyRewardsState extends State<LoyaltyRewards> {
                           if (index == data[i].length - 1) {
                             return GestureDetector(
                               onTap: () {
-                                print("Link tapped in row $i: $text");
-                                // Yahan navigate ya link action lagao
+                                showImagePopup(context);
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -161,6 +160,66 @@ class _LoyaltyRewardsState extends State<LoyaltyRewards> {
           ],
         ),
       ),
+    );
+  }
+
+  void showImagePopup(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false, // user can't dismiss by tapping outside
+      builder: (BuildContext context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          insetPadding:
+              EdgeInsets.symmetric(horizontal: 24), // horizontal margin
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // 📷 Image Section
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    '$kBGFolder/bike-dummy-image.jpeg',
+                    height: 350,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
+                // ❌ Close Button
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(Icons.close, color: kPrimaryColor),
+                  label: Text(
+                    "Close",
+                    style: TextStyle(color: kPrimaryColor),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    elevation: 0,
+                    side: BorderSide(color: kPrimaryColor),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 12,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
